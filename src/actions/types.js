@@ -1,0 +1,16 @@
+export const FETCH_TODOS='FETCH_TODOS';
+// export const GET_TODO='GET_TODO';
+export const ERROR_TODO='ERROR_TODO';
+export const USER_LOADING='USER_LOADING';
+export const USER_LOADED='USER_LOADED';
+export const AUTH_ERROR='AUTH_ERROR';
+export const LOGIN_FAIL='LOGIN_FAIL';
+export const LOGIN_SUCCESS='LOGIN_SUCCESS';
+export const LOGOUT_SUCCESS='LOGOUT_SUCCESS';
+export const REGESTER_SUCCESS='REGESTER_SUCCESS';
+export const REGESTER_FAIL='REGESTER_FAIL';
+export const GET_ERRORS='GET_ERRORS';
+export const CLEAR_ERRORS='CLEAR_ERRORS';
+export const TODOS_LOADING='TODOS_LOADING';
+export const TODOS_LOADED='TODOS_LOADED';
+export const ADD_TODO='ADD_TODO';

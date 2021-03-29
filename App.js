@@ -1,21 +1,26 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { Component } from 'react';
+// import { View, Text } from 'react-native';
+// import AuthStack from './src/components/routes/AuthStack';
+import {Provider} from 'react-redux';
+import store from './src/store';
+import {loadUser} from './src/actions/authActions'
+import Dashboard from './src/components/dashboard/Dashboard';
+// import 'localstorage-polyfill';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+class App extends Component {
+
+  componentDidMount(){
+    store.dispatch(loadUser())
+  }
+  
+  render() {
+    return (
+      <Provider store={store}>
+          <Dashboard/>
+      </Provider>
+
+    );
+  }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
